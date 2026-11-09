@@ -9,14 +9,15 @@ const multiplyValue = (value: number, multiplier?: number): number => {
 };
 
 // 2
-const processInput = (value: number | string | boolean) => {
+const processInput = (
+  value: number | string | boolean,
+): number | string | boolean => {
   if (typeof value === "number") {
     return value * 10;
   } else if (typeof value === "string") {
     return value.trim().toLowerCase();
-  } else {
-    return value ? "Activate" : "Inactivate";
   }
+  return value ? "Activate" : "Inactivate";
 };
 
 // 3
@@ -28,3 +29,21 @@ const formatCoordinate = (
 };
 
 // 4
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+  return arrays.flat();
+};
+
+// 5
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
+
+const getPopularCourses = (array: Course[], minStudents: number): Course[] => {
+  return array.filter(
+    (item) => item.isPublished && item.students >= minStudents,
+  );
+};
+
+// 6
