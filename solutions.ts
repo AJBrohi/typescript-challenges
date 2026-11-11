@@ -1,4 +1,3 @@
-// 1
 const multiplyValue = (value: number, multiplier?: number): number => {
   if (multiplier && multiplier > 0) {
     return value * multiplier;
@@ -8,7 +7,6 @@ const multiplyValue = (value: number, multiplier?: number): number => {
   return value * 2;
 };
 
-// 2
 const processInput = (
   value: number | string | boolean,
 ): number | string | boolean => {
@@ -20,7 +18,6 @@ const processInput = (
   return value ? "Activate" : "Inactivate";
 };
 
-// 3
 const formatCoordinate = (
   coordinate: readonly [number, number, string],
 ): string => {
@@ -28,12 +25,10 @@ const formatCoordinate = (
   return `Location: ${area} (${lat} ${long})`;
 };
 
-// 4
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
 
-// 5
 interface Course {
   title: string;
   students: number;
@@ -46,12 +41,10 @@ const getPopularCourses = (array: Course[], minStudents: number): Course[] => {
   );
 };
 
-// 6
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   return items.map((item) => item[key]);
 }
 
-// 7
 class Employee {
   constructor(
     protected name: string,
@@ -77,7 +70,6 @@ class Manager extends Employee {
   }
 }
 
-// 8
 const validateAgeAsync = (age: number): Promise<string> => {
   return new Promise<string>((resolve, reject) => {
     if (age < 18) {
